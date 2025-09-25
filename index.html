@@ -189,8 +189,11 @@
 
         .hero-content {
             max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
             z-index: 1;
+            position: relative;
+            padding: 20px;
         }
 
         /* Profile Photo */
@@ -211,6 +214,18 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .avatar-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--primary-glow));
         }
 
         .glitch {
@@ -854,7 +869,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="profile-photo">
-                <img src="profile-photo.jpg" alt="Vishal Jain - AI & ML Engineer">
+                <div class="avatar-fallback">VJ</div>
             </div>
             <h1 class="glitch">AI & ML Engineer</h1>
             <p class="subtitle">Innovating with AI/ML & Building Scalable Web Solutions</p>
