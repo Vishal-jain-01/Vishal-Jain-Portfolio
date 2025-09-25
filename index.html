@@ -184,7 +184,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 0 50px;
+            padding: 100px 50px 50px;
         }
 
         .hero-content {
@@ -778,7 +778,22 @@
             color: var(--primary);
         }
 
-        /* Responsive */
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero {
+                padding: 120px 30px 50px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             nav {
                 padding: 15px 20px;
@@ -790,25 +805,41 @@
             }
 
             .hero {
-                padding: 0 20px;
+                padding: 100px 20px 40px;
+                min-height: calc(100vh - 80px);
             }
 
             .profile-photo {
-                width: 150px;
-                height: 150px;
+                width: 140px;
+                height: 140px;
+                margin-bottom: 25px;
             }
 
             .glitch {
-                font-size: clamp(40px, 15vw, 80px);
+                font-size: clamp(32px, 12vw, 60px);
+                margin-bottom: 15px;
             }
 
             .subtitle {
-                font-size: 18px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 25px;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 200px;
+                padding: 12px 24px;
             }
 
             .about, .projects, .skills, .contact {
@@ -835,6 +866,69 @@
 
             body {
                 cursor: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 90px 15px 30px;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 20px;
+            }
+
+            .glitch {
+                font-size: clamp(24px, 10vw, 40px);
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .hero-description {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+
+            .btn {
+                width: 180px;
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .about, .projects, .skills, .contact {
+                padding: 50px 15px;
+            }
+
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+
+            .project-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .project-link {
+                min-width: auto;
+            }
+
+            .nav-links {
+                gap: 10px;
+                font-size: 12px;
             }
         }
     </style>
@@ -869,7 +963,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="profile-photo">
-                <div class="avatar-fallback">VJ</div>
+                <img src="./profile-photo.jpg" alt="Vishal Jain - AI & ML Engineer">
             </div>
             <h1 class="glitch">AI & ML Engineer</h1>
             <p class="subtitle">Innovating with AI/ML & Building Scalable Web Solutions</p>
