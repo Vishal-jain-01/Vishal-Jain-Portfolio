@@ -442,6 +442,114 @@
             font-size: 14px;
         }
 
+        /* Experience Section */
+        .experience {
+            padding: 100px 50px;
+            background: rgba(15, 15, 25, 0.3);
+        }
+
+        .experience-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .experience-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-glow));
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .experience-title {
+            font-size: 24px;
+            color: var(--light);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .experience-company {
+            font-size: 18px;
+            color: var(--primary-glow);
+            margin-bottom: 5px;
+        }
+
+        .experience-period {
+            color: var(--gray);
+            font-size: 14px;
+            background: rgba(99, 102, 241, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .experience-description {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .experience-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .highlight-badge {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-glow);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-badge:hover {
+            background: rgba(99, 102, 241, 0.2);
+            transform: translateY(-2px);
+        }
+
         /* Projects Section */
         .projects {
             padding: 100px 50px;
@@ -878,7 +986,7 @@
                 padding: 12px 24px;
             }
 
-            .about, .projects, .skills, .contact {
+            .about, .experience, .projects, .skills, .contact {
                 padding: 60px 20px;
             }
 
@@ -988,6 +1096,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1036,15 +1145,15 @@
                     
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <span class="stat-number">5+</span>
+                            <span class="stat-number">7+</span>
                             <span class="stat-label">Projects Completed</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">3+</span>
+                            <span class="stat-number">5+</span>
                             <span class="stat-label">Programming Languages</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">2+</span>
+                            <span class="stat-number">3+</span>
                             <span class="stat-label">Years Learning</span>
                         </div>
                     </div>
@@ -1071,6 +1180,38 @@
                     <div class="achievement-item">
                         <h4>📊 Data Science</h4>
                         <p>Analyzing complex datasets and extracting meaningful insights to drive intelligent decision-making.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="experience-container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">AI Intern</h3>
+                            <div class="experience-company">Matter Vision Pvt Ltd</div>
+                        </div>
+                        <div class="experience-period">Internship Period</div>
+                    </div>
+                    <p class="experience-description">
+                        Developed a cutting-edge Facial Expression Recognition system using Convolutional Neural Networks (CNN) 
+                        enhanced with Spatial Active Unit attention mechanism. Successfully improved recognition performance from 
+                        62% to 85.2% on the KDEF (Karolinska Directed Emotional Faces) dataset, demonstrating significant 
+                        advancement in emotion detection accuracy.
+                    </p>
+                    <div class="experience-highlights">
+                        <span class="highlight-badge">Deep Learning</span>
+                        <span class="highlight-badge">CNN Architecture</span>
+                        <span class="highlight-badge">Computer Vision</span>
+                        <span class="highlight-badge">Attention Mechanism</span>
+                        <span class="highlight-badge">KDEF Dataset</span>
+                        <span class="highlight-badge">85.2% Accuracy</span>
                     </div>
                 </div>
             </div>
@@ -1222,6 +1363,31 @@
                         Live Demo
                     </a>
                     <a href="https://github.com/Vishal-jain-01/student-management-java-cli" class="project-link github" target="_blank">
+                        <span>📂</span>
+                        View Code
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">🎉</div>
+                <h3 class="project-title">Event-Hub</h3>
+                <p class="project-description">
+                    Modern event discovery and management platform designed to simplify how users browse, create, and participate in events. 
+                    Features an intuitive and responsive user interface with seamless navigation across workshops, college fests, webinars, and cultural activities.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-badge">React.js</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Express.js</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">Responsive Design</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://event-hub-two-tan.vercel.app/" class="project-link live" target="_blank">
+                        <span>🚀</span>
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/Vishal-jain-01/EventHub" class="project-link github" target="_blank">
                         <span>📂</span>
                         View Code
                     </a>
