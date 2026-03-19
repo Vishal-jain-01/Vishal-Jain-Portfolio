@@ -12,7 +12,7 @@
       "dest": "/images/$1"
     },
     {
-      "src": "/(.*\\.(css|js|jpg|png|gif|svg|ico))",
+      "src": "/(.*\\.(css|js|jpg|png|gif|svg|ico|pdf))",
       "dest": "/$1"
     },
     {
